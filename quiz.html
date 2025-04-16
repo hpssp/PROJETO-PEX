@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Seu Conhecimento</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles quiz.css">
+    <link rel="icon" href="imagens/icon.pex.jpeg">
+</head>
+<body>
+    <!-- Menu (mantido igual) -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="abrir-menu">☰ Menu</label>
+    <nav class="menu-navegacao">
+        <label for="menu-toggle" class="fechar-menu">✖</label>
+        <ul>
+            <li><a href="ux.html">Experiência do Usuário</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="desenvolvedores.html">Desenvolvedores</a></li>
+            <li><a href="conteudo.html">Conteúdo</a></li>
+            <li><a href="index.html">Início</a></li>
+        </ul>
+    </nav>
+    
+        <div class="quiz-container">
+            <h1>Quiz Interativo</h1>
+            <button class="start-quiz">Começar Quiz</button>
+    
+            <div class="questions-container hide">
+                <h2 class="question"></h2>
+                <div class="answer-container"></div>
+                <button class="next-question hide">Próxima Pergunta</button>
+            </div>
+        </div>
+
+    <div class="glowing-nebula"></div>
+    <div class="background-animation"></div>
+    <script type="module" src="./Quiz.js"></script>
+</body>
+</html>

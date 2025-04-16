@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: linear-gradient(to right, #002400, #000000);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 0, 0.15) 10%, transparent 80%);
+    background-attachment: fixed;
+}
+@keyframes backgroundMove {
+    0% { transform: scale(1) translateY(-10px); opacity: 0.8; }
+    100% { transform: scale(1.1) translateY(10px); opacity: 1; }
+}
+.container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+}
+.left {
+    max-width: 600px;
+}
+.logo {
+    width: 600px;
+    height: 600px;
+    border-radius: 10%;
+}
+.description {
+    margin-top: 20px;
+    font-size: 22px;
+}
+.right {
+    flex-direction: column;
+    gap: 15px;
+    right: 600px;
+    display: flex;
+}
+h2 {
+  color: #4ade80;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+    
+}
+
+.button:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+@keyframes movingGlow {
+    0% { transform: translateX(-10%) translateY(-10%) scale(1); opacity: 0.6; }
+    50% { transform: translateX(10%) translateY(10%) scale(1.2); opacity: 0.8; }
+    100% { transform: translateX(-10%) translateY(-10%) scale(1); opacity: 0.6; }
+}
+
+.glowing-nebula {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background: radial-gradient(circle, rgba(83, 31, 180, 0.4) 10%, transparent 70%);
+    animation: movingGlow 8s infinite alternate ease-in-out;
+    filter: blur(80px);
+    z-index: -1;
+}
+
+/* Checkbox invisível */
+.menu-toggle {
+    display: none;
+  }
+  
+  /* Botão abrir menu */
+  .abrir-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(to right, #065f46, #064e3b);
+    color: #46c273;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1001;
+    transition: background 0.3s;
+  }
+  
+  .abrir-menu:hover {
+    background: #047857;
+  }
+  
+  /* Estilo do menu */
+  .menu-navegacao {
+    position: fixed;
+    top: 0;
+    left: -250px; /* escondido por padrão */
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(to bottom, #002d00, #081c18, #0a0f23);
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .menu-navegacao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-navegacao li {
+    margin: 20px 0;
+  }
+  
+  .menu-navegacao a {
+    color: #4ade80;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s;
+  }
+  
+  .menu-navegacao a:hover {
+    background: #064e3b;
+    border-radius: 4px;
+  }
+  
+  /* Botão fechar menu */
+  .fechar-menu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #4ade80;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Quando o checkbox estiver marcado, mostra o menu */
+  .menu-toggle:checked ~ .menu-navegacao {
+    left: 0;
+  }
+
